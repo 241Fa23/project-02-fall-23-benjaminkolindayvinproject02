@@ -1,21 +1,24 @@
 package project02startingfiles.Screen;
-<<<<<<< Updated upstream
-import project02startingfiles.PlayerData.Player;
-=======
 
->>>>>>> Stashed changes
+import project02startingfiles.PlayerData.Player;
+
 public class Screen {
+
     private Player playerData;
-    public Screen(Player playerData){
+
+    public Screen(Player playerData) {
         this.playerData = playerData;
     }
-    public void status(){
+
+    public void status() {
 
     }
-    public void movement(){
+
+    public void movement() {
 
     }
-    public void startCombat(){
+
+    public void startCombat() {
 
     }
 }

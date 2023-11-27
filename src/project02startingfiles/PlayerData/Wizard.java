@@ -11,4 +11,5 @@ public class Wizard extends Player {
     public void useSpecialMove() {
         System.out.println("The Wizard casts a spell!");
     }
+
 }

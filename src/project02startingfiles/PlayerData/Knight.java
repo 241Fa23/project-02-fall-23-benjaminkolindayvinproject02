@@ -11,4 +11,5 @@ public class Knight extends Player {
     public void useSpecialMove() {
         System.out.println("Knight slashes with their sword!");
     }
+
 }

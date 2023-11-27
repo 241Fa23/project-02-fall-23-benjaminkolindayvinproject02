@@ -11,4 +11,5 @@ public class Thief extends Player {
     public void useSpecialMove() {
         System.out.println("The Thief sneaks by!");
     }
+
 }

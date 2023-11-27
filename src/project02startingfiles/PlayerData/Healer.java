@@ -11,4 +11,5 @@ public class Healer extends Player {
     public void useSpecialMove() {
         System.out.println("The Healer uses the sleeping powder!");
     }
+
 }

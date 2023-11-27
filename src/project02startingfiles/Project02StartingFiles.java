@@ -1,7 +1,6 @@
 package project02startingfiles;
 
 import project02startingfiles.PlayerData.*;
-import project02startingfiles.Screen.*;
 
 /**
  *

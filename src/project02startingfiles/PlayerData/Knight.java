@@ -12,4 +12,8 @@ public class Knight extends Player {
         System.out.println("Knight slashes with their sword!");
     }
 
+    @Override
+    public String toString() {
+        return "Knight Status:\nHealth: " + health + "\nScore: " + score;
+    }
 }

@@ -12,4 +12,8 @@ public class Healer extends Player {
         System.out.println("The Healer uses the sleeping powder!");
     }
 
+    @Override
+    public String toString() {
+        return "Healer Status:\nHealth: " + health + "\nScore: " + score;
+    }
 }

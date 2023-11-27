@@ -15,6 +15,8 @@ public class Project02StartingFiles {
 
         boolean quitFlag = false;
         Scanner input = new Scanner(System.in);
+        String action;
+
         while (quitFlag = false) {
             System.out.println("What would you like to do?");
             System.out.println("“{?}Status Report || "
@@ -22,6 +24,7 @@ public class Project02StartingFiles {
                     + "{q}Quit");
 
             //3 if statements for status report, movement, and quit.
+            action = input.nextLine();
 
             //status report
             if(false){

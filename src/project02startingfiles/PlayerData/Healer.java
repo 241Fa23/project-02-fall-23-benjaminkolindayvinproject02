@@ -1,7 +1,10 @@
 package project02startingfiles.PlayerData;
 
 public class Healer extends Player {
-    public Healer(int health, int score) {super(health, score);}
+
+    public Healer(int health, int score) {
+        super(health, score);
+    }
 
     @Override
     public String getSpecialMove() {
@@ -10,6 +13,6 @@ public class Healer extends Player {
 
     @Override
     public void useSpecialMove() {
-
+        System.out.println("The Healer uses the sleeping powder!");
     }
 }

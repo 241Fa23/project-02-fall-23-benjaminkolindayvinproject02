@@ -1,7 +1,10 @@
 package project02startingfiles.PlayerData;
 
-public class Thief extends Player{
-    public Thief(int health, int score) {super(health, score);}
+public class Thief extends Player {
+
+    public Thief(int health, int score) {
+        super(health, score);
+    }
 
     @Override
     public String getSpecialMove() {
@@ -10,6 +13,6 @@ public class Thief extends Player{
 
     @Override
     public void useSpecialMove() {
-
+        System.out.println("The Thief sneaks by!");
     }
 }

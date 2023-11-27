@@ -1,7 +1,10 @@
 package project02startingfiles.PlayerData;
 
-public class Wizard extends Player{
-    public Wizard(int health, int score) {super(health, score);}
+public class Wizard extends Player {
+
+    public Wizard(int health, int score) {
+        super(health, score);
+    }
 
     @Override
     public String getSpecialMove() {
@@ -10,6 +13,6 @@ public class Wizard extends Player{
 
     @Override
     public void useSpecialMove() {
-
+        System.out.println("The Wizard casts a spell!");
     }
 }

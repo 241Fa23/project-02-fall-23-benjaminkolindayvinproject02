@@ -10,8 +10,8 @@ import java.util.*;
 public class Project02StartingFiles {
 
     public static void main(String[] args) {
-        Player test = new Knight();
-        System.out.println(test.getScore());
+        Player player = new Knight();
+        System.out.println(player.getScore());
 
         boolean quitFlag = false;
         Scanner input = new Scanner(System.in);
@@ -28,11 +28,14 @@ public class Project02StartingFiles {
             Random rand = new Random();
 
             //status report
-            if(false){
-
+            if(action.equals("?")){
+                System.out.println(player.getClass() + " Status:");
+                System.out.println("Health: " + player.getHealth());
+                System.out.println("Score: " + player.getScore());
+                System.out.println("The " + player.getClass() + " Special Move is " + player.getSpecialMove());
             }
             //movement if chain
-            else if(false){
+            else if(action.equals("n") || action.equals("s") || action.equals("e") || action.equals("w")){
                 //20% chance combat check
                 if(false){
 
@@ -42,8 +45,8 @@ public class Project02StartingFiles {
                 }
 
             }
-            else if(false){
-
+            else if(action.equals("q")){
+                quitFlag = true;
             }
         }
     }

@@ -25,6 +25,7 @@ public class Project02StartingFiles {
 
             //3 if statements for status report, movement, and quit.
             action = input.nextLine();
+            Random rand = new Random();
 
             //status report
             if(false){

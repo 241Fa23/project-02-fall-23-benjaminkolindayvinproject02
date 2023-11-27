@@ -22,6 +22,25 @@ public class Project02StartingFiles {
                     + "{q}Quit");
 
             //3 if statements for status report, movement, and quit.
+
+            //status report
+            if(false){
+
+            }
+            //movement if chain
+            else if(false){
+                //20% chance combat check
+                if(false){
+
+                }
+                else{
+                    //If not 20% hit, do rest of movement here
+                }
+
+            }
+            else if(false){
+
+            }
         }
     }
 

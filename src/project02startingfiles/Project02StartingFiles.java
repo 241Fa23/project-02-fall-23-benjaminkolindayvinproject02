@@ -24,7 +24,7 @@ public class Project02StartingFiles {
                     + "{q}Quit");
 
             //3 if statements for status report, movement, and quit.
-            action = input.nextLine();
+            action = input.nextLine().toLowerCase();
             Random rand = new Random();
 
             //status report
@@ -38,9 +38,8 @@ public class Project02StartingFiles {
                 int chance;
                 chance = rand.nextInt(6);
                 if (chance == 1) {
-                    if (false) {
                         int chances;
-                        String Foe;
+                        String Foe = "";
                         chances = rand.nextInt(4);
                         switch (chances) {
                             case 1:
@@ -60,28 +59,24 @@ public class Project02StartingFiles {
                         System.out.println("{S} Use Special Move ||{R} Run");
                         System.out.print("Enter your choice: ");
                         String Choice = input.nextLine();
-                        if ("S".equals(Choice)) {
+                        if ("s".equals(Choice)) {
                             String letter;
                             System.out.println("Prepare for battle!\nPress any letter then ENTER to continue");
-                            letter = input.nextLine();
+                            letter = input.nextLine().toLowerCase();
 
-                            //System.out.println(player.getClassName "used" player.getSpecialMove()+"\nPlayer wins!");
+                            player.useSpecialMove();
+                            System.out.println("Player wins!");
                             player.setScore(2);
-                        } else if ("R".equals(Choice)) {
+                        } else if ("r".equals(Choice)) {
                             int run;
                             run = rand.nextInt(6);
                             if (run <= 3) {
                                 System.out.println("Run was unsuccessful");
-                                player.setHealth() - 1
-                              
-                                ));
+                                player.setHealth(1);
                                }
                             else{
                                 System.out.println("Run was successful");
                             }
-
-                        }
-
                     } else {
                         //If not 20% hit, do rest of movement here
                     }

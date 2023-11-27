@@ -10,7 +10,7 @@ public abstract class Player {
     public abstract void useSpecialMove();
 
     public void setHealth(int health) {
-        this.health = health;
+        this.health -= health;
     }
 
     public void setScore(int score) {

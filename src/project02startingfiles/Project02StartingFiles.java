@@ -10,12 +10,36 @@ import java.util.*;
 public class Project02StartingFiles {
 
     public static void main(String[] args) {
-        Player player = new Knight();
-        System.out.println(player.getScore());
-
+        Player player = null;
         boolean quitFlag = false;
         Scanner input = new Scanner(System.in);
         String action;
+        String playerClass = "";
+        
+        System.out.println("Choose a character…” and “{k}Knight || {h}Healer || {w}Wizard || {t}Thief");
+        action = input.nextLine();
+        switch (action){
+            case "k":
+                System.out.println("Welcome, Knight!");
+                player = new Knight();
+                playerClass = "Knight";
+                break;
+            case "h":
+                System.out.println("Welcome, Healer!");
+                player = new Healer();
+                playerClass = "Healer";
+                break;
+            case "w":
+                System.out.println("Welcome, Wizard!");
+                player = new Wizard();
+                playerClass = "Wizard";
+                break;
+            case "t":
+                System.out.println("Welcome, Thief!");
+                player = new Thief();
+                playerClass = "Thief";
+                break;
+        }
 
         while (quitFlag == false) {
             System.out.println("What would you like to do?");
@@ -29,10 +53,8 @@ public class Project02StartingFiles {
 
             //status report
             if (action.equals("?")) {
-                System.out.println(player.getClass() + " Status:");
-                System.out.println("Health: " + player.getHealth());
-                System.out.println("Score: " + player.getScore());
-                System.out.println("The " + player.getClass() + " Special Move is " + player.getSpecialMove());
+                System.out.println(player);
+                System.out.println("The " + playerClass + " Special Move is " + player.getSpecialMove());
             } //movement if chain
             else if (action.equals("n") || action.equals("s") || action.equals("e") || action.equals("w")) {
                 int chance;
@@ -75,8 +97,8 @@ public class Project02StartingFiles {
                             System.out.println("Run was successful");
                         }
                     }
-                    //If not 20% hit, do rest of movement here
 
+                    //If not 20% hit, do rest of movement here
                 } else {
                     int random;
                     random = rand.nextInt(4);
@@ -98,7 +120,17 @@ public class Project02StartingFiles {
                 }
             } else if (action.equals("q")) {
                 quitFlag = true;
+                System.out.println("The game has come to an end! Your final stats:");
                 System.out.println(player);
+                System.out.println("The " + playerClass + " Special Move is " + player.getSpecialMove());
+                System.out.println("Thanks for playing!");
+            }
+            if(player.getHealth() == 0){
+                quitFlag = true;
+                System.out.println("The game has come to an end! Your final stats:");
+                System.out.println(player);
+                System.out.println("The " + playerClass + " Special Move is " + player.getSpecialMove());
+                System.out.println("Thanks for playing!");
             }
         }
     }

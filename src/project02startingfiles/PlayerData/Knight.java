@@ -14,6 +14,7 @@ public class Knight extends Player {
 
     @Override
     public String toString() {
-        return "Knight Status:\nHealth: " + health + "\nScore: " + score;
+        return "Knight Status:\nHealth: " + super.getHealth() + "\nScore: " + super.getScore();
+
     }
 }

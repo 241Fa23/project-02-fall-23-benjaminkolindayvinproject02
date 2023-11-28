@@ -14,6 +14,6 @@ public class Healer extends Player {
 
     @Override
     public String toString() {
-        return "Healer Status:\nHealth: " + health + "\nScore: " + score;
+        return "Healer Status:\nHealth: " + super.getHealth() + "\nScore: " + super.getScore();
     }
 }

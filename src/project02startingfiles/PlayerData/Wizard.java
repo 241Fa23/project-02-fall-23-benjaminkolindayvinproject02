@@ -14,6 +14,6 @@ public class Wizard extends Player {
 
     @Override
     public String toString() {
-        return "Wizard Status:\nHealth: " + health + "\nScore: " + score;
+        return "Wizard Status:\nHealth: " + super.getHealth() + "\nScore: " + super.getScore();
     }
 }

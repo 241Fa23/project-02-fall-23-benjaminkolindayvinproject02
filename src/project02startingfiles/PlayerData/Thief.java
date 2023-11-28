@@ -14,6 +14,7 @@ public class Thief extends Player {
 
     @Override
     public String toString() {
-        return "Thief Status:\nHealth: " + health + "\nScore: " + score;
+        return "Thief Status:\nHealth: " + super.getHealth() + "\nScore: " + super.getScore();
     }
+
 }

@@ -40,18 +40,16 @@ public class Project02StartingFiles {
                 if (chance == 1) {
                     int chances;
                     String Foe = "";
-                    chances = rand.nextInt(4);
+                    chances = rand.nextInt(3);
                     switch (chances) {
-                        case 1:
+                        case 0:
                             Foe = "Bandit";
                             break;
-                        case 2:
+                        case 1:
                             Foe = "Zombie";
                             break;
-                        case 3:
+                        case 2:
                             Foe = "Lobbyist";
-                            break;
-                        default:
                             break;
                     }
                     System.out.println("You are being attacked by a " + Foe);
@@ -76,27 +74,31 @@ public class Project02StartingFiles {
                         } else {
                             System.out.println("Run was successful");
                         }
-                    } else {
-                        //If not 20% hit, do rest of movement here
+                    }
+                    //If not 20% hit, do rest of movement here
+
+                } else {
+                    int random;
+                    random = rand.nextInt(4);
+                    System.out.println(random);
+                    switch (random) {
+                        case 0:
+                            System.out.println("Nothing here…");
+                            break;
+                        case 1:
+                            System.out.println("Nice trees around here…");
+                            break;
+                        case 2:
+                            System.out.println("Interesting cottage there…");
+                            break;
+                        case 3:
+                            System.out.println("Potty break…");
+                            break;
                     }
                 }
-
             } else if (action.equals("q")) {
                 quitFlag = true;
-                if (false) {
-                    System.out.println(test.toString());
-                } //movement if chain
-                else if (false) {
-                    //20% chance combat check
-                    if (false) {
-
-                    } else {
-                        //If not 20% hit, do rest of movement here
-                    }
-
-                } else if (false) {
-
-                }
+                System.out.println(player);
             }
         }
     }

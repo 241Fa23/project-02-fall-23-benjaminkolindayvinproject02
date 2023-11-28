@@ -15,32 +15,40 @@ public class Project02StartingFiles {
         Scanner input = new Scanner(System.in);
         String action;
         String playerClass = "";
-        
-        System.out.println("Choose a character…” and “{k}Knight || {h}Healer || {w}Wizard || {t}Thief");
-        action = input.nextLine();
-        switch (action){
-            case "k":
-                System.out.println("Welcome, Knight!");
-                player = new Knight();
-                playerClass = "Knight";
-                break;
-            case "h":
-                System.out.println("Welcome, Healer!");
-                player = new Healer();
-                playerClass = "Healer";
-                break;
-            case "w":
-                System.out.println("Welcome, Wizard!");
-                player = new Wizard();
-                playerClass = "Wizard";
-                break;
-            case "t":
-                System.out.println("Welcome, Thief!");
-                player = new Thief();
-                playerClass = "Thief";
-                break;
-        }
 
+        while (quitFlag == false) {
+            System.out.println("Choose a character…” and “{k}Knight || {h}Healer || {w}Wizard || {t}Thief");
+            action = input.nextLine();
+            switch (action) {
+                case "k":
+                    System.out.println("Welcome, Knight!");
+                    player = new Knight();
+                    playerClass = "Knight";
+                    quitFlag = true;
+                    break;
+                case "h":
+                    System.out.println("Welcome, Healer!");
+                    player = new Healer();
+                    playerClass = "Healer";
+                    quitFlag = true;
+                    break;
+                case "w":
+                    System.out.println("Welcome, Wizard!");
+                    player = new Wizard();
+                    playerClass = "Wizard";
+                    quitFlag = true;
+                    break;
+                case "t":
+                    System.out.println("Welcome, Thief!");
+                    player = new Thief();
+                    playerClass = "Thief";
+                    quitFlag = true;
+                    break;
+                default:
+                    System.out.println("Incorrect input!");
+            }
+        }
+        quitFlag = false;
         while (quitFlag == false) {
             System.out.println("What would you like to do?");
             System.out.println("“{?}Status Report || "
@@ -83,6 +91,7 @@ public class Project02StartingFiles {
                         String letter;
                         System.out.println("Prepare for battle!\nPress any letter then ENTER to continue");
                         letter = input.nextLine().toLowerCase();
+                        System.out.println("**************************");
 
                         player.useSpecialMove();
                         System.out.println("Player wins!");
@@ -96,25 +105,34 @@ public class Project02StartingFiles {
                         } else {
                             System.out.println("Run was successful");
                         }
+                    } else {
+                        System.out.println("Incorrect input!");
                     }
 
                     //If not 20% hit, do rest of movement here
                 } else {
                     int random;
                     random = rand.nextInt(4);
-                    System.out.println(random);
                     switch (random) {
                         case 0:
+                            System.out.println("*********************");
                             System.out.println("Nothing here…");
+                            System.out.println("*********************");
                             break;
                         case 1:
+                            System.out.println("*********************");
                             System.out.println("Nice trees around here…");
+                            System.out.println("*********************");
                             break;
                         case 2:
+                            System.out.println("*********************");
                             System.out.println("Interesting cottage there…");
+                            System.out.println("*********************");
                             break;
                         case 3:
+                            System.out.println("*********************");
                             System.out.println("Potty break…");
+                            System.out.println("*********************");
                             break;
                     }
                 }
@@ -124,8 +142,11 @@ public class Project02StartingFiles {
                 System.out.println(player);
                 System.out.println("The " + playerClass + " Special Move is " + player.getSpecialMove());
                 System.out.println("Thanks for playing!");
+            } else {
+                System.out.println("Incorrect input!");
             }
-            if(player.getHealth() == 0){
+
+            if (player.getHealth() == 0) {
                 quitFlag = true;
                 System.out.println("The game has come to an end! Your final stats:");
                 System.out.println(player);
